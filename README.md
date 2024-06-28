@@ -198,8 +198,11 @@ Using mocked dependencies to ensure that the controller methods handle HTTP requ
 ![image](https://github.com/LukaszKrolicki/LibraryApi/assets/54467678/e62a21c4-5666-47e0-8fd0-10a1776ea86b)
 
 •	testAddBook: Adds a book and verifies its addition.
+
 •	testGetAllBooks: Adds a book and verifies it can be retrieved.
+
 •	testGetBookById: Adds a book and verifies it can be retrieved by ID.
+
 •	testDeleteBook: Adds and deletes a book, then verifies its deletion.
 
 ### 5.2 Integration Tests
