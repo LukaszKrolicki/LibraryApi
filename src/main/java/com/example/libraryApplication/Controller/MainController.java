@@ -17,10 +17,9 @@ public class MainController {
     @Autowired
     private LibraryService libraryService;
 
-    // Book endpoints
     @PostMapping("/addBook")
-    public void addBook(@RequestBody Book book) {
-        libraryService.saveBook(book);
+    public Book addBook(@RequestBody Book book) {
+        return libraryService.saveBook(book);
     }
 
     @GetMapping("/books")
@@ -33,17 +32,16 @@ public class MainController {
         return libraryService.getBookById(id);
     }
 
-    @PutMapping("/UpdateBook/{id}")
-    public Book updateBook(@PathVariable String id, @RequestBody Book book) {
-        return libraryService.updateBook(id, book);
-    }
-
     @DeleteMapping("/DeleteBook/{id}")
     public void deleteBook(@PathVariable String id) {
         libraryService.deleteBook(id);
     }
 
-    // Customer endpoints
+    @PutMapping("/books/{id}")
+    public Book updateBook(@PathVariable String id, @RequestBody Book updatedBook) {
+        return libraryService.updateBook(id, updatedBook);
+    }
+
     @PostMapping("/AddCustomer")
     public Customer addCustomer(@RequestBody Customer customer) {
         return libraryService.saveCustomer(customer);
@@ -59,17 +57,16 @@ public class MainController {
         return libraryService.getCustomerById(id);
     }
 
-    @PutMapping("/UpdateCustomer/{id}")
-    public Customer updateCustomer(@PathVariable String id, @RequestBody Customer customer) {
-        return libraryService.updateCustomer(id, customer);
-    }
-
     @DeleteMapping("/DeleteCustomer/{id}")
     public void deleteCustomer(@PathVariable String id) {
         libraryService.deleteCustomer(id);
     }
 
-    // Loan endpoints
+    @PutMapping("/customers/{id}")
+    public Customer updateCustomer(@PathVariable String id, @RequestBody Customer updatedCustomer) {
+        return libraryService.updateCustomer(id, updatedCustomer);
+    }
+
     @PostMapping("/loans")
     public Loan borrowBook(@RequestParam String bookId, @RequestParam String customerId) {
         return libraryService.borrowBook(bookId, customerId);
