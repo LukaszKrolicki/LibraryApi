@@ -2,15 +2,15 @@
 
 ------------------------------
 
-1.Technology Used
+### 1.Technology Used
 	
 1.1 Accomplished goals
 
-2. Project Structure
+### 2. Project Structure
 
-3. DataInitializer class
+### 3. DataInitializer class
 
-4.Endpoints showcase
+### 4.Endpoints showcase
 
 4.1 Add book
 
@@ -36,13 +36,13 @@
 
 4.12 Return a book
 
-5. Tesiting
+### 5. Tesiting
 
 5.1 Mock Testing
 
 5.2 Integration Tests
 
-6.Custom Exception Handling
+### 6.Custom Exception Handling
 
 6.1 No resource/book/customer
 
